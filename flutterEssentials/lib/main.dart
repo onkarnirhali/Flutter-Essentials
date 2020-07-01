@@ -15,25 +15,59 @@ class HomePage extends StatelessWidget {
       appBar: AppBar(
         title: Text("Basic Essential App"),
       ),
-      body: Center(
-        child: Container(
-          width: 100,
-          height: 200,
-          clipBehavior: Clip.antiAlias,
-          padding: EdgeInsets.symmetric(vertical: 2),
-          decoration: BoxDecoration(
-              color: Colors.blueAccent,
-              gradient: LinearGradient(colors: [Colors.blue, Colors.blueGrey]),
-              borderRadius: BorderRadius.circular(5),
-              boxShadow: [BoxShadow(color: Colors.black, blurRadius: 20)]),
-          alignment: Alignment.center,
-          child: Text(
-            "Hey Guys!!this is Onkar",
-            style: TextStyle(fontWeight: FontWeight.w900, color: Colors.white),
-            textAlign: TextAlign.center,
-          ),
+      body: Container(
+        color: Colors.grey,
+        height: 200,
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: <Widget>[
+            Container(
+              height: 150,
+              width: 100,
+              // color: Colors.amber,
+              alignment: Alignment.center,
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(22), color: Colors.amber),
+            ),
+            Container(
+                height: 100,
+                width: 100,
+                //color: Colors.blueAccent,
+                alignment: Alignment.center,
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(22),
+                    color: Colors.blue)),
+            Container(
+                height: 100,
+                width: 100,
+                //color: Colors.deepPurple,
+                alignment: Alignment.center,
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(22),
+                    color: Colors.deepPurple))
+          ],
         ),
       ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {},
+        child: Icon(Icons.add),
+        elevation: 22,
+        hoverColor: Colors.blue,
+      ),
+      drawer: Drawer(
+          child: ListView(
+        padding: const EdgeInsets.all(0),
+        children: <Widget>[
+          UserAccountsDrawerHeader(
+            accountName: Text("Onkar Nirhali"),
+            accountEmail: Text("nirhalionkar@gmail.com"),
+            currentAccountPicture: CircleAvatar(
+              backgroundColor: Colors.amber,
+            ),
+          )
+        ],
+      )),
     );
   }
 }
