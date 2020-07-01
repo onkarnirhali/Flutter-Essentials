@@ -49,6 +49,25 @@ class HomePage extends StatelessWidget {
           ],
         ),
       ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {},
+        child: Icon(Icons.add),
+        elevation: 22,
+        hoverColor: Colors.blue,
+      ),
+      drawer: Drawer(
+          child: ListView(
+        padding: const EdgeInsets.all(0),
+        children: <Widget>[
+          UserAccountsDrawerHeader(
+            accountName: Text("Onkar Nirhali"),
+            accountEmail: Text("nirhalionkar@gmail.com"),
+            currentAccountPicture: CircleAvatar(
+              backgroundColor: Colors.amber,
+            ),
+          )
+        ],
+      )),
     );
   }
 }
