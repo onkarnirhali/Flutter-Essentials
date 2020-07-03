@@ -16,8 +16,27 @@ class HomePage extends StatelessWidget {
         title: Text("Basic Essential App"),
       ),
       body: Center(
-        child: Card(
-          elevation: 20,
+        child: Padding(
+          padding: const EdgeInsets.all(10),
+          child: Card(
+            elevation: 50,
+            child: Column(
+              children: <Widget>[
+                Image.network(
+                    "https://s30776.pcdn.co/wp-content/uploads/2020/04/AdobeStock_305233591.jpeg"),
+                SizedBox(
+                  height: 20,
+                ),
+                Text(
+                  "Hey Its text here",
+                  style: TextStyle(fontWeight: FontWeight.bold),
+                ),
+                TextField(
+                  style: TextStyle(fontStyle: FontStyle.italic),
+                )
+              ],
+            ),
+          ),
         ),
       ),
       floatingActionButton: FloatingActionButton(
